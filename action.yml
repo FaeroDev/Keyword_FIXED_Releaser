@@ -1,0 +1,9 @@
+name : 'Keyword FIXED Releaser over 9000'
+description: 'creates releases based on FIXED keyword'
+author: 'faerodev'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'package'
+  color: 'orange'
