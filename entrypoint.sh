@@ -28,7 +28,12 @@ then
     DATA="${DATA} $(printf '"body":"Automated release based on keyword: %s",' "$*")"
     DATA="${DATA} $(printf '"draft":false, "prerelease":false}')"
 
-    URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases?access_token=${GITHUB_TOKEN}"
+    URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases Authorization:token:${GITHUB_TOKEN}"
+
+    # URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases?access_token=${GITHUB_TOKEN}"
+    # URL="-H 'Authorization: token ${GITHUB_TOKEN}' https://api.github.com/repos/${GITHUB_REPOSITORY}/releases"
+
+    # -H 'Authorization: token my_access_token'
 
     if [[ "${LOCAL_TEST}" == *"true"* ]];
     then
