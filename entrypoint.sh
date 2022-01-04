@@ -31,7 +31,8 @@ then
 #     URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases Authorization:token ${GITHUB_TOKEN}"
 
     # URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases?access_token=${GITHUB_TOKEN}"
-    URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases Authorization:token=${GITHUB_TOKEN}"
+    URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases"
+#     Authorization:token=${GITHUB_TOKEN}"
 
     # -H 'Authorization: token my_access_token'
 
