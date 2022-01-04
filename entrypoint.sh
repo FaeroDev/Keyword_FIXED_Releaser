@@ -31,7 +31,7 @@ then
 #     URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases Authorization:token ${GITHUB_TOKEN}"
 
     # URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases?access_token=${GITHUB_TOKEN}"
-    URL="-H 'Authorization: token ${GITHUB_TOKEN}' https://api.github.com/repos/${GITHUB_REPOSITORY}/releases"
+    URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases Authorization:token=${GITHUB_TOKEN}"
 
     # -H 'Authorization: token my_access_token'
 
@@ -39,8 +39,7 @@ then
     then
         echo "## [TESTING] Keyword was found but no release was created."
     else
-#         echo $DATA | http POST $URL | jq .
-        echo | curl -i $URL | jq .
+        echo $DATA | http POST $URL | jq .
     fi
 # otherwise
 else
