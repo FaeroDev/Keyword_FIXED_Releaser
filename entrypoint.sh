@@ -40,7 +40,7 @@ then
         echo "## [TESTING] Keyword was found but no release was created."
     else
 #         echo $DATA | http POST $URL | jq .
-        curl -d $DATA -i $URL | jq .
+        echo | curl -i $URL | jq .
     fi
 # otherwise
 else
